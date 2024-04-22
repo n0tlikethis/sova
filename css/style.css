@@ -11,23 +11,12 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
-body {
-  line-height: 1.6;
-}
-
-/* Utility Classes  and stylings */
 img {
   width: 100%;
   display: block;
 }
-.container {
+.containers {
   padding: 5rem 1rem;
-}
-.text {
-  padding: 10px 0;
-  font-size: 15px;
-  font-weight: 400;
-  opacity: 0.7;
 }
 .btn {
   margin: 25px 0;
@@ -40,99 +29,70 @@ img {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-.btn:hover {
-  color: var(--pacificBlue);
-}
 
-/* header */
 .header {
   min-height: 100vh;
-  background: var(--blackRussian);
   display: flex;
   flex-direction: column;
   justify-content: stretch;
 }
-.head-top {
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90vw;
-  margin: 0 auto;
-  padding: 18px 0;
+.navbar {
+  padding: 14px 5%;
 }
-.head-body {
-  flex: 1;
-  background: var(--greyWhite);
-}
-.brand-name {
-  color: #fff;
-  text-transform: uppercase;
+.navbar-brand {
   font-size: 20px;
-  text-decoration: none;
   font-weight: 600;
-  transition: color 0.4s ease;
 }
-.brand-name span {
-  background: #fff;
-  color: var(--blackRussian);
-  padding: 5px 10px;
-  transition: background 0.4s ease;
-}
-.brand-name:hover {
-  color: var(--pacificBlue);
-}
-.brand-name:hover span {
-  background: var(--pacificBlue);
-}
-.head-icon {
+.nav-item {
   margin-left: 30px;
-  cursor: pointer;
-  transition: color 0.4s linear;
   font-size: 20px;
 }
-.head-icon:hover {
-  color: var(--pacificBlue);
-}
-.head-body {
+
+.hero {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background: var(--greyWhite);
   background-color: #dedee4;
   background-image: linear-gradient(45deg, #dedee4 0%, #f9f9f9 100%);
 }
-.head-body > div {
+.hero > div {
   margin: 16px;
 }
-.head-body-content {
+.hero-content {
   text-align: center;
   height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
 }
-.head-body-img img {
+.hero-content p {
+  font-size: 15px;
+}
+.hero-img img {
   width: 60%;
   margin: 0 auto;
 }
-.head-title {
+.hero-title {
   font-size: 42px;
   text-transform: capitalize;
   line-height: 1.5;
   padding: 10px 0;
   font-family: "Fira Sans", sans-serif;
   word-spacing: 7px;
+  font-weight: 700;
 }
 
-/* title */
 .title {
   margin: 30px 0;
 }
 .title h4 {
   text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 800;
 }
 .title h2 {
   text-transform: capitalize;
@@ -141,7 +101,6 @@ img {
   font-family: "Fira Sans", sans-serif;
   padding: 5px 0;
 }
-/*********/
 
 /* trend */
 .trend-item {
@@ -200,6 +159,12 @@ img {
   background: var(--blackRussian);
 }
 .footer .brand-name {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.4s ease;
   margin: 24px 0;
 }
 .footer a {
@@ -208,6 +173,9 @@ img {
 }
 .footer a:hover {
   opacity: 0.7;
+}
+.footer ul {
+  padding-left: 0;
 }
 .footer ul li {
   list-style: none;
@@ -222,6 +190,8 @@ img {
   opacity: 0.9;
 }
 .footer h3 {
+  font-size: 20px;
+  font-weight: 700;
   text-transform: uppercase;
   padding: 12px 0;
   color: var(--greyWhite);
@@ -252,19 +222,19 @@ img {
 }
 
 @media screen and (min-width: 992px) {
-  .container {
+  .containers {
     padding: 5rem 10rem;
   }
-  .head-body-content {
+  .hero-content {
     flex: 1;
     height: auto;
     align-items: flex-start;
     text-align: left;
   }
-  .head-body-img {
+  .hero-img {
     flex: 1;
   }
-  .head-body-img img {
+  .hero-img img {
     width: 100%;
   }
   .footer {
@@ -278,22 +248,22 @@ img {
 }
 
 @media screen and (max-width: 400px) {
-  .head-top {
+  .navbar {
     flex-direction: column;
   }
-  .head-icon:first-child {
+  .nav-item:first-child {
     margin-left: 0;
   }
-  .brand-name {
+  .navbar-brand {
     margin-bottom: 20px;
   }
-  .head-body-content h1 {
+  .hero-content h1 {
     font-size: 30px;
   }
-  .head-body-content p {
+  .hero-content p {
     display: none;
   }
-  .head-body.container {
+  .hero.containers {
     padding-top: 1.5rem;
     padding-bottom: 2rem;
   }
